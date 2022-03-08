@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public float sensitivity;
-    public Transform playerCamera; 
+    public Transform playerCamera;
 
-    float mouseX;
-    float mouseY;
+    float mouseX, mouseY; 
     float cameraRotation; 
 
     // Start is called before the first frame update
@@ -20,7 +19,7 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerCamera = this.gameObject.transform.GetChild(0);
+        playerCamera = transform.GetChild(0);
 
         mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
