@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
     public float sensitivity;
-    public Transform playerCamera;
+    
+    Transform playerCamera;
 
     float mouseX, mouseY; 
     float cameraRotation; 
