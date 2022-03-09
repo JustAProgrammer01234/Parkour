@@ -11,7 +11,8 @@ public class PlayerMove : MonoBehaviour
     Vector3 motion;
     bool checkGround; 
     float verticalInput, horizontalInput;
-    float gravity; 
+    float gravity;
+    Vector3 crouch = new Vector3(1f, 0.5f, 1f); 
 
     // Update is called once per frame
     void Update()
@@ -29,6 +30,16 @@ public class PlayerMove : MonoBehaviour
         {
             GetComponent<PlayerGravity>().velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+
+        if (Input.GetButtonDown("Fire3"))
+        {
+            transform.localScale = crouch; 
+        }
+        else if (Input.GetButtonUp("Fire3"))
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
 
         playerController.Move(motion * speed * Time.deltaTime);
     }
