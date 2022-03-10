@@ -7,24 +7,19 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public float jumpHeight = 3f; 
 
-    CharacterController playerController;
-    Vector3 motion;
-    bool checkGround; 
-    float verticalInput, horizontalInput;
-    float gravity;
     Vector3 crouch = new Vector3(1f, 0.5f, 1f); 
 
     // Update is called once per frame
     void Update()
     {
-        playerController = GetComponent<CharacterController>();
-        gravity = GetComponent<PlayerGravity>().gravity;
-        checkGround = GetComponent<PlayerGravity>().checkGround; 
+        CharacterController playerController = GetComponent<CharacterController>();
+        float gravity = GetComponent<PlayerGravity>().gravity;
+        bool checkGround = GetComponent<PlayerGravity>().checkGround; 
 
-        verticalInput = Input.GetAxis("Vertical");
-        horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
 
-        motion = transform.forward * verticalInput + transform.right * horizontalInput;
+        Vector3 motion = transform.forward * verticalInput + transform.right * horizontalInput;
 
         if (Input.GetButtonDown("Jump") && checkGround)
         {

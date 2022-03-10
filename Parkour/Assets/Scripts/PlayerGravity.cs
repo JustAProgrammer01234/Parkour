@@ -9,14 +9,12 @@ public class PlayerGravity : MonoBehaviour
     public float gravity = -19.62f;
     public bool checkGround;
 
-    CharacterController playerController;
-    Transform groundCheck;
-
     // Update is called once per frame
     void Update()
     { 
-        playerController = GetComponent<CharacterController>();
-        groundCheck = transform.GetChild(2);
+        CharacterController playerController = GetComponent<CharacterController>();
+        Transform groundCheck = transform.GetChild(2);
+
         checkGround = Physics.CheckSphere(groundCheck.position, 0.4f, groundMask);
 
         if (checkGround && velocity.y < 0)

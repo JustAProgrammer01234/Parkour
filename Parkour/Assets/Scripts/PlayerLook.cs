@@ -7,8 +7,7 @@ public class PlayerLook : MonoBehaviour
     public float sensitivity;
     
     Transform playerCamera;
-
-    float mouseX, mouseY; 
+    
     float cameraRotation; 
 
     // Start is called before the first frame update
@@ -22,8 +21,8 @@ public class PlayerLook : MonoBehaviour
     {
         playerCamera = transform.GetChild(0);
 
-        mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         cameraRotation -= mouseY;
         cameraRotation = Mathf.Clamp(cameraRotation, -90f, 90f);
