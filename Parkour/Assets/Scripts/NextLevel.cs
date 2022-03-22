@@ -16,17 +16,17 @@ public class NextLevel : MonoBehaviour
     {
         if (!isCollided)
         {
-            StartCoroutine(GoToNextlevel());
-        }
-    }
+            int scenes = SceneManager.sceneCountInBuildSettings;
+            int buildIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-    IEnumerator GoToNextlevel()
-    {
-        AsyncOperation loadScene = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+            if (((scenes - 1) - buildIndex) == 1)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true; 
+            }
 
-        while (!loadScene.isDone)
-        {
-            yield return null; 
+            SceneManager.LoadScene(buildIndex);
+            isCollided = true; 
         }
     }
 }
