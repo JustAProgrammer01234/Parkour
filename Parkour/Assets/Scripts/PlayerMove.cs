@@ -7,23 +7,27 @@ public class PlayerMove : MonoBehaviour
     public float speed;
     public float jumpHeight = 3f; 
 
-    Vector3 crouch = new Vector3(1f, 0.5f, 1f); 
+    Vector3 crouch = new Vector3(1f, 0.5f, 1f);
+    CharacterController playerController;
+    PlayerGravity playerGravity;
+
+    void Start()
+    {
+        playerController = GetComponent<CharacterController>();
+        playerGravity = GetComponent<PlayerGravity>();
+    }
 
     // Update is called once per frame
     void Update()
-    {
-        CharacterController playerController = GetComponent<CharacterController>();
-        float gravity = GetComponent<PlayerGravity>().gravity;
-        bool checkGround = GetComponent<PlayerGravity>().checkGround; 
-
+    { 
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 motion = transform.forward * verticalInput + transform.right * horizontalInput;
 
-        if (Input.GetButtonDown("Jump") && checkGround)
+        if (Input.GetButtonDown("Jump") && playerGravity.checkGround)
         {
-            GetComponent<PlayerGravity>().velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            playerGravity.velocity.y = Mathf.Sqrt(jumpHeight * -2f * playerGravity.gravity);
         }
 
         if (Input.GetButtonDown("Fire3"))
