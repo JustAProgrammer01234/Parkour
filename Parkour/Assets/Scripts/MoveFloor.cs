@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MoveFloor : MonoBehaviour
 {
-    public Animation movingFloorAnim; 
+    public bool reversed; 
 
-    // Update is called once per frame
+    Animator animator; 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
-        
     }
 }
