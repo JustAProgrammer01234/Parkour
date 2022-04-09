@@ -10,11 +10,13 @@ public class PlayerMove : MonoBehaviour
     Vector3 crouch = new Vector3(1f, 0.5f, 1f);
     CharacterController playerController;
     PlayerGravity playerGravity;
+    AudioSource audioSource; 
 
     void Start()
     {
         playerController = GetComponent<CharacterController>();
         playerGravity = GetComponent<PlayerGravity>();
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     // Update is called once per frame
@@ -28,6 +30,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetButtonDown("Jump") && playerGravity.checkGround)
         {
             playerGravity.velocity.y = Mathf.Sqrt(jumpHeight * -2f * playerGravity.gravity);
+            audioSource.Play(); 
         }
 
         if (Input.GetButtonDown("Fire3"))
