@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    public float sensitivity;
+
     Transform playerCamera;
     float cameraRotation;
-    float sensitivity = 250f;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        playerCamera = transform.GetChild(0); 
+        playerCamera = transform.GetChild(0);
+        sensitivity = SaveMe.Load().sensitivity; 
     }
 
     // Update is called once per frame

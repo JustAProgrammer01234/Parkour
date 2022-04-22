@@ -9,6 +9,13 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsMenu; 
     public static bool isPaused = false;
 
+    LoadSettingsData loadSettingsData;
+ 
+    void Start()
+    {
+        loadSettingsData = GetComponent<LoadSettingsData>();
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
@@ -42,6 +49,9 @@ public class PauseMenu : MonoBehaviour
     public void Settings()
     {
         pauseMenu.SetActive(false);
-        settingsMenu.SetActive(true); 
+        settingsMenu.SetActive(true);
+
+        Data settingsData = SaveMe.Load();
+        loadSettingsData.LoadData(settingsData);
     }
 }
