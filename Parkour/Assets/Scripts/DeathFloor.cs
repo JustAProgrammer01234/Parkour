@@ -7,7 +7,7 @@ public class DeathFloor : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true; 
     }

@@ -14,7 +14,7 @@ public class PlayerLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         playerCamera = transform.GetChild(0);
-        sensitivity = SaveMe.Load().sensitivity; 
+        sensitivity = SaveMe.Load().sensitivity;
     }
 
     // Update is called once per frame

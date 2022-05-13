@@ -31,6 +31,6 @@ public class SettingsMenu : MonoBehaviour
 
     public void ChangeSensitivity(float s)
     {
-        sensitivity = s; 
+        sensitivity = s;
     }
 }

@@ -9,7 +9,7 @@ public class Data
 {
     public float sensitivity { get; private set; }
     public Data(float s)
-    {
+    { 
         this.sensitivity = s;
     }
 }

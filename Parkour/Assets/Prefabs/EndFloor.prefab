@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 2891683020826924303}
   - component: {fileID: 7749929222293188283}
   - component: {fileID: 4297733382022624619}
-  - component: {fileID: 1728144123820534814}
   - component: {fileID: 2105696211684946909}
   - component: {fileID: 7647239702014315785}
-  - component: {fileID: 8883761576060657764}
   m_Layer: 6
   m_Name: GoToNextLevel
   m_TagString: Untagged
@@ -32,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.61, z: 0.003}
   m_LocalScale: {x: 0.16822, y: 0.16822, z: 0.16822}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2345917323967691833}
   m_RootOrder: 0
@@ -55,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -85,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1728144123820534814
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676439934649917220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1, z: 1}
-  m_Center: {x: 0.0000076293945, y: 0.00000047683716, z: -0.0000076293945}
 --- !u!114 &2105696211684946909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,22 +110,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 0.99999994, z: 1}
   m_Center: {x: 0.0000019073486, y: 0, z: 0}
---- !u!54 &8883761576060657764
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676439934649917220}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2295839710946618530
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +139,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 107.307014, y: 4.8, z: 101.66}
   m_LocalScale: {x: 20.077858, y: 1.2777866, z: 19.85169}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2891683020826924303}
   m_Father: {fileID: 0}
@@ -192,6 +164,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

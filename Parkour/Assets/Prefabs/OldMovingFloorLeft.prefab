@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8322281141917789859}
   - component: {fileID: 1836567537974586516}
   m_Layer: 6
-  m_Name: MovingFloorLeft
+  m_Name: OldMovingFloorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,10 +64,10 @@ GameObject:
   - component: {fileID: 8095311930681583579}
   - component: {fileID: 6938186573804342902}
   - component: {fileID: 8543046524753981880}
-  - component: {fileID: 3775687391090363113}
   - component: {fileID: 8979911861308064019}
   - component: {fileID: 362007326988284839}
   - component: {fileID: 4436296388551465022}
+  - component: {fileID: 2596969911379152155}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -140,19 +140,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3775687391090363113
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240438410539197040}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8979911861308064019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0c0e1927bdd094e9b5d11e765bdfe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!54 &362007326988284839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,5 +179,18 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 4, z: 0.99999994}
+  m_Size: {x: 1, y: 4.42, z: 1}
+  m_Center: {x: 0, y: 0, z: 9.313226e-10}
+--- !u!65 &2596969911379152155
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240438410539197040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 9.313226e-10}

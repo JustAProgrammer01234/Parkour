@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StickToMe : MonoBehaviour
 {
-    public Transform player;
+    Transform player;
 
     void Start()
     {
